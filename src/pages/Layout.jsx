@@ -1,16 +1,15 @@
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
+
 
 export const Layout = () => {
     return (
         <ScrollToTop>
-            <Navbar />
+            
             <div className="container mt-3" style={{ minHeight: "80vh" }}>
                 <Outlet />
             </div>
-            <Footer />
+            
         </ScrollToTop>
     );
 };

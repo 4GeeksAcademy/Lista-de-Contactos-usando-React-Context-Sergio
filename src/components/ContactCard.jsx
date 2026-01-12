@@ -5,10 +5,10 @@ export const ContactCard = ({ contact, onDelete }) => {
     return (
         <li className="list-group-item d-flex justify-content-between align-items-center p-3">
             <div className="d-flex align-items-center">
-                <img 
-                    src="https://img.freepik.com/vector-premium/icono-perfil-usuario-estilo-plano-ilustracion-vector-avatar-miembro-sobre-fondo-aislado-concepto-negocio-signo-permiso-usuario_157943-15752.jpg" 
-                    alt="profile" 
-                    className="rounded-circle me-3" 
+                <img
+                    src="https://img.freepik.com/vector-premium/icono-perfil-usuario-estilo-plano-ilustracion-vector-avatar-miembro-sobre-fondo-aislado-concepto-negocio-signo-permiso-usuario_157943-15752.jpg"
+                    alt="profile"
+                    className="rounded-circle me-3"
                     style={{ width: "80px", height: "80px", objectFit: "cover" }}
                 />
                 <div className="text-start">
@@ -29,9 +29,11 @@ export const ContactCard = ({ contact, onDelete }) => {
                 <Link to={`/edit-contact/${contact.id}`} className="btn btn-link p-2 text-dark">
                     <i className="fas fa-pencil-alt"></i>
                 </Link>
-                
-                <button 
-                    className="btn btn-link p-2 text-danger" 
+
+                <button
+                    className="btn btn-link p-2 text-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteModal"
                     onClick={() => onDelete(contact.id)}
                 >
                     <i className="fas fa-trash-alt"></i>
